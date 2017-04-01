@@ -9,4 +9,6 @@ if (production) {
     config.host = "localhost";
 }
 
+config.particleSettings = {};
+
 module.exports = config;
