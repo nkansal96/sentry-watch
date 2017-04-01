@@ -12,4 +12,11 @@ router.post('/configure', (req, res) => {
 	config.particleSettings.enablePanicButton = req.body.enablePanicButton;
 	config.particleSettings.enableSound = req.body.enableSound;
 	config.particleSettings.enableLEDs = req.body.enableLEDs;
+
+	console.log(req.body);
+	console.log(config.particleSettings);
+
+	res.send();
 });
+
+module.exports = router;
