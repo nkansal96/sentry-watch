@@ -7,7 +7,7 @@ router.post('/configure', (req, res) => {
 	config.particleSettings.emergencyContacts = [req.body.emergencyContact1, req.body.emergencyContact2];
 	
 	// Config boolean values
-	config.particleSettings.alertEMS = req.body.alertEmergencyServices === 'true';
+	config.particleSettings.alertEmergencyServices = req.body.alertEmergencyServices === 'true';
 	config.particleSettings.enableStruggleDetection = req.body.enableStruggleDetection === 'true';
 	config.particleSettings.enablePanicButton = req.body.enablePanicButton === 'true';
 	config.particleSettings.enableSound = req.body.enableSound === 'true';
