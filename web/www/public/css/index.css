@@ -82,7 +82,7 @@ div.section#header {
     width: 100%;
     height: 400px;
     padding-top: 50px;
-    background-image: linear-gradient(to bottom right, #E53935, #FF8A65);
+    background-image: linear-gradient(to bottom right, #E53945, #FF8A99);
 }
 
 div.section#header h1 {
