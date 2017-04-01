@@ -6,7 +6,9 @@ let server = express();
 
 server.use(compression());
 server.use(bodyParser.json());
+server.use(bodyParser.urlencoded());
 server.use(express.static('www/public', { maxAge: 1000 * 60 * 60 * 24 * 30 }));
+server.use('/api', app.api.router);
 
 server.listen(app.config.port, () => {
     console.log("Started server on port", app.config.port);
