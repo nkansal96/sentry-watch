@@ -19,4 +19,4 @@ router.post('/configure', (req, res) => {
 	res.send();
 });
 
-module.exports = router;
+module.exports = { router };
