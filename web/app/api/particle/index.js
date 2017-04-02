@@ -56,7 +56,7 @@ router.post('/struggle', (req, res) => {
 		return res.json({});
 	}
 
-	var randIndex = Math.random() % 4;
+	var randIndex = Math.floor(Math.random() * (maxIndex - minIndex + 1)) + minIndex;
 	console.log('randIndex: ' + randIndex);
 
 	let msg = config.particleSettings.name + "\'s behavior indicates that he/she is in a physical struggle. His/her last known location was at: " + locations[randIndex];
