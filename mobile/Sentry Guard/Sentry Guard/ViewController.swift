@@ -13,6 +13,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var emergencyContact1: UITextField!
     @IBOutlet weak var emergencyContact2: UITextField!
+    @IBOutlet weak var name: UITextField!
     @IBOutlet weak var alertEmergencyServices: UISwitch!
     @IBOutlet weak var enableStruggleDetection: UISwitch!
     @IBOutlet weak var enablePanicButton: UISwitch!
@@ -39,6 +40,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         self.emergencyContact1.inputAccessoryView = doneToolbar
         self.emergencyContact2.inputAccessoryView = doneToolbar
+        self.name.inputAccessoryView = doneToolbar
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -48,6 +50,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     func done() {
+        name.resignFirstResponder()
         emergencyContact1.resignFirstResponder()
         emergencyContact2.resignFirstResponder()
     }
@@ -55,7 +58,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     func sendSettings() {
         var request = URLRequest(url: URL(string: settingsURL)!)
         request.httpMethod = "POST"
-        let postString = "emergencyContact1=\(emergencyContact1.text ?? "")&emergencyContact2=\(emergencyContact2.text ?? "")&alertEmergencyServices=\(alertEmergencyServices.isOn)&enableStruggleDetection=\(enableStruggleDetection.isOn)&enablePanicButton=\(enablePanicButton.isOn)&enableSound=\(enableSound.isOn)&enableLEDs=\(enableLEDs.isOn)"
+        let postString = "name=\(name.text ?? "")&emergencyContact1=\(emergencyContact1.text ?? "")&emergencyContact2=\(emergencyContact2.text ?? "")&alertEmergencyServices=\(alertEmergencyServices.isOn)&enableStruggleDetection=\(enableStruggleDetection.isOn)&enablePanicButton=\(enablePanicButton.isOn)&enableLEDs=\(enableLEDs.isOn)"
         request.httpBody = postString.data(using: .utf8)
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data, error == nil else { // check for fundamental networking error

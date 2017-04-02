@@ -12,6 +12,8 @@
 		291745C81E901BDE001C48C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 291745C61E901BDE001C48C6 /* Main.storyboard */; };
 		291745CA1E901BDE001C48C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 291745C91E901BDE001C48C6 /* Assets.xcassets */; };
 		291745CD1E901BDE001C48C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 291745CB1E901BDE001C48C6 /* LaunchScreen.storyboard */; };
+		2948E17C1E90F7100026E1F5 /* header.png in Resources */ = {isa = PBXBuildFile; fileRef = 2948E17B1E90F7100026E1F5 /* header.png */; };
+		2948E17E1E90F9210026E1F5 /* appicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2948E17D1E90F9210026E1F5 /* appicon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		291745C91E901BDE001C48C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		291745CC1E901BDE001C48C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		291745CE1E901BDE001C48C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2948E17B1E90F7100026E1F5 /* header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header.png; sourceTree = "<group>"; };
+		2948E17D1E90F9210026E1F5 /* appicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appicon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 				291745C41E901BDE001C48C6 /* ViewController.swift */,
 				291745C61E901BDE001C48C6 /* Main.storyboard */,
 				291745C91E901BDE001C48C6 /* Assets.xcassets */,
+				2948E17D1E90F9210026E1F5 /* appicon.png */,
+				2948E17B1E90F7100026E1F5 /* header.png */,
 				291745CB1E901BDE001C48C6 /* LaunchScreen.storyboard */,
 				291745CE1E901BDE001C48C6 /* Info.plist */,
 			);
@@ -124,8 +130,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2948E17E1E90F9210026E1F5 /* appicon.png in Resources */,
 				291745CD1E901BDE001C48C6 /* LaunchScreen.storyboard in Resources */,
 				291745CA1E901BDE001C48C6 /* Assets.xcassets in Resources */,
+				2948E17C1E90F7100026E1F5 /* header.png in Resources */,
 				291745C81E901BDE001C48C6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,6 +271,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = MBMYC4N26G;
 				INFOPLIST_FILE = "Sentry Guard/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kansal.Sentry-Guard";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -276,6 +285,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = MBMYC4N26G;
 				INFOPLIST_FILE = "Sentry Guard/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kansal.Sentry-Guard";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -302,6 +312,7 @@
 				291745D31E901BDE001C48C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
