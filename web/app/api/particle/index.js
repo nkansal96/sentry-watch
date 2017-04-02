@@ -28,7 +28,7 @@ router.post('/panic', (req, res) => {
 	var toSend = config.particleSettings.enablePanicButton;
 	var alertEmergencyServices = config.particleSettings.alertEmergencyServices;
 
-	for (var i = 0; i < 2; i++) {
+	for (var i = 0; i < emergencyContacts.length; i++) {
 		if (toSend && emergencyContacts[i] !== undefined && emergencyContacts[i].length !== 0)
 			twilio.sendText(msg, emergencyContacts[i], (err, message) => {
 				// console.log(err, message);
@@ -65,7 +65,7 @@ router.post('/struggle', (req, res) => {
 	var toSend = config.particleSettings.enableStruggleDetection;
 	var alertEmergencyServices = config.particleSettings.alertEmergencyServices;
 
-	for (var i = 0; i < 2; i++) {
+	for (var i = 0; i < emergencyContacts.length; i++) {
 		if (toSend && emergencyContacts[i] !== undefined && emergencyContacts[i].length !== 0)
 			twilio.sendText(msg, emergencyContacts[i], (err, message) => {
 				// console.log(err, message);
