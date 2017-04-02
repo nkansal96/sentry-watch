@@ -69,7 +69,7 @@ div.section .small {
 
 div.section h1 {
     font-size: 4em;
-    font-weight: 700;
+    font-weight: 550;
     margin: 0px;
     color: #333333;
     padding: 60px 50px 20px 50px;
@@ -79,6 +79,7 @@ div.section h1 {
 
 div.section h2 {
     font-size: 2em;
+    font-weight: 300;
     margin: 0px;
     padding: 0px 50px;
     font-family: 'Montserrat', sans-serif;
@@ -110,6 +111,14 @@ div.section p {
     color: #333333;
 }
 
+div.section p b {
+    font-weight: 400;
+    background: #666666;
+    /*color: #333333;*/
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
 div.section.section-dark {
     background-color: #333333;
     color: white;
@@ -124,6 +133,14 @@ div.section.section-dark p {
     color: white;  
 }
 
+#header-text {
+    margin-top: 60px;
+}
+
+#team-title {
+    text-align: center;
+}
+
 #lighthouse {
     margin-top: 20px;
     float: left;
@@ -131,11 +148,34 @@ div.section.section-dark p {
     width: 350px;
 }
 
+#watch {
+    margin-top: 60px;
+    margin-left: 150px;
+    height: 250px;
+    width: 250px;
+}
+
+#shield-siren {
+    float: left;
+}
+
+#shield {
+    margin-top: 50px;
+    height: 200px;
+    width: 200px;
+}
+
+#siren {
+    margin-top: 50px;
+    height: 200px;
+    width: 200px;
+}
+
 .img-circle {
     border-radius: 200px;
     height: 192px;
     width: 192px;
-    margin-top: 40px;
+    margin-top: 60px;
     margin-left: 20px;
     margin-right: 20px;
     border: 5px solid #E2E2E2;
