@@ -4,13 +4,13 @@ let router = express.Router();
 router.post('/panic', (req, res) => {
 	console.log(req.body);
 
-	res.send();
+	res.json({});
 });
 
 router.post('/struggle', (req, res) => {
 	console.log(req.body);
 
-	res.send();
+	res.json({});
 });
 
 module.exports = { router };
