@@ -156,17 +156,17 @@ div.section.section-dark p {
 }
 
 #shield-siren {
+    margin-top: 130px;
     float: left;
 }
 
 #shield {
-    margin-top: 50px;
+    
     height: 200px;
     width: 200px;
 }
 
 #siren {
-    margin-top: 50px;
     height: 200px;
     width: 200px;
 }
