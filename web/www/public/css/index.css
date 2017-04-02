@@ -63,7 +63,8 @@ div.section .large {
 }
 
 div.section .small {
-    width: 35%;
+    width: 38%;
+
 }
 
 div.section h1 {
@@ -123,17 +124,24 @@ div.section.section-dark p {
     color: white;  
 }
 
+#lighthouse {
+    margin-top: 20px;
+    float: left;
+    height: 350px;
+    width: 350px;
+}
+
 .img-circle {
     border-radius: 200px;
     height: 192px;
     width: 192px;
-    margin-left: 2.5em;
-    margin-right: 2.5em;
+    margin-top: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
     border: 5px solid #E2E2E2;
 }
 
 .team-table {
-    padding-top: 1em;
     text-align: center;
 }
 
