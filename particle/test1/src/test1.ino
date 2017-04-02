@@ -165,7 +165,7 @@ void loop(){ // one time is 50 ms
 			Serial.printf("%f, %f, %f, %f, %f\n", slopeArr[0], slopeArr[1], slopeArr[2], slopeArr[3], slopeArr[4]);
 			if (C == 0 || D == 0)
 					continue;
-			if (A/B > 20.0 && B > 0.5) {
+			if (A/B > 25.0 && B > 0.5) {
 					Serial.printf("Adding an LED: %d\n", leds);
 					if (leds < 11)
 						b.ledOn(++leds, 0, leds*10, leds*13);
