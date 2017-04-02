@@ -8,6 +8,11 @@ body {
 .left { float: left; }
 .clear { clear: both; }
 
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
 div#navbar {
     position: fixed;
     height: 50px;
@@ -117,6 +122,25 @@ div.section.section-dark h1 {
 div.section.section-dark p {
     color: white;  
 }
+
+.img-circle {
+    border-radius: 200px;
+    height: 192px;
+    width: 192px;
+    margin-left: 2.5em;
+    margin-right: 2.5em;
+    border: 5px solid #E2E2E2;
+}
+
+.team-table {
+    padding-top: 1em;
+    text-align: center;
+}
+
+.team-table td:hover {
+    background-color: #F2F2F2;
+}
+
 
 div#footer {
     height: 50px;
