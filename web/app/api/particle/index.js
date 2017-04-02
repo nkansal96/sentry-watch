@@ -7,6 +7,8 @@ router.post('/panic', (req, res) => {
 	console.log('Panic:')
 	console.log(req.body);
 
+debugger;
+
 	let msg = config.particleSettings.name + " has sent you a panic alert. His/her last known location was .";
 	var emergencyContacts = config.particleSettings.emergencyContacts;
 
