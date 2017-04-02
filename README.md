@@ -1,6 +1,6 @@
 # Sentry Watch
 
-Made with love by Nikhil Kansal, Helen Lee, Su Thaw, and Nathan Yang at LA Hacks 2017.
+Made with love by Nikhil Kansal, Helen Lee, Su Thaw, and Nathan Yang at LA Hacks 2017. See the project on [Devpost](https://devpost.com/software/sentry-watch).
 
 ## Inspiration
 We were really inspired by Justin’s closing speech, where he urged us to think beyond our own personal problems and build something that could benefit the people around us. One of the things that we are constantly reminded of by the media is the constant stream of daunting civil crime occurring close to our homes. We decided that as UCLA students and L.A. residents, we had the power to create something to make our community safer.
