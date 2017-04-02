@@ -10,7 +10,6 @@ function sendText(text, receiver, callback){
 		to: receiver,
 		from: '15108172421'
 	}, function(err, message) {
-		console.log(message.sid);
 		callback(err, message);
 	});
 }
