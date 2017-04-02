@@ -17,6 +17,7 @@ double total = 0;
 double slopeArr[5] = {-1};
 int resetTimer = 40;
 int leds = 0;
+int heldCounter = 0;
 
 #define MAXN 15
 #define N 10
@@ -33,8 +34,22 @@ void setup() {
 		b.setBrightness(100);
 }
 
+void handleSilentAlert() {
+    if ((b.buttonOn(1) || b.buttonOn(2) || b.buttonOn(3) || b.buttonOn(4))) {
+        heldCounter++;
+    } else {
+        if (heldCounter > 0) {
+            Serial.printf("%d\n",heldCounter);
+            Particle.publish("panic");
+        }
+
+        heldCounter = 0;
+    }
+}
+
 void loop(){ // one time is 50 ms
-	delay(20);
+	handleSilentAlarm();
+   delay(20);
   if (arrXCounter < (N+5)) {
     points[arrXCounter].x = arrXCounter;
     points[arrXCounter++].y = abs(b.readX());
@@ -171,6 +186,7 @@ void loop(){ // one time is 50 ms
 						b.ledOn(++leds, 0, leds*10, leds*13);
 					if (leds >= 11) {
 						// send to the server
+						Particle.publish("struggle");
 					}
 					resetTimer = 40;
 			} else {
