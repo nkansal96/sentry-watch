@@ -12,7 +12,8 @@ router.post('/configure', (req, res) => {
 	config.particleSettings.enablePanicButton = req.body.enablePanicButton === 'true';
 	config.particleSettings.enableLEDs = req.body.enableLEDs === 'true';
 	
-	console.log(req.body);
+	// console.log(req.body);
+	console.log('Configurations:');
 	console.log(config.particleSettings);
 
 	res.send();
