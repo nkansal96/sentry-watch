@@ -12,7 +12,8 @@ router.post('/panic', (req, res) => {
 
 	for (var i = 0; i < emergencyContacts.length; i++) {
 		if (emergencyContacts[i] !== undefined && emergencyContacts[i].length !== 0)
-			twilio.sendText(msg, emergencyContacts[i], () => {
+			twilio.sendText(msg, emergencyContacts[i], (err, message) => {
+				console.log(err, message);
 				console.log('Panic alert sent');
 			});
 	}
@@ -29,7 +30,8 @@ router.post('/struggle', (req, res) => {
 
 	for (var i = 0; i < emergencyContacts.length; i++) {
 		if (emergencyContacts[i] !== undefined && emergencyContacts[i].length !== 0)
-			twilio.sendText(msg, emergencyContacts[i], () => {
+			twilio.sendText(msg, emergencyContacts[i], (err, message) => {
+				console.log(err, message);
 				console.log('Struggle alert sent');
 			});
 	}
