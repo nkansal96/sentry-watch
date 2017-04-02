@@ -1,4 +1,4 @@
-#include <cstdio>
+/*#include <cstdio>
 #include <cstdlib>
 #include <algorithm>
 #include <stack>
@@ -35,7 +35,7 @@ int main()	{
         printf("(%d, %d)\n", i, points[i].y);
     }
 
-	
+
 	// precompute the error terms
 	cumulative_x[0] = cumulative_y[0] = cumulative_xy[0] = cumulative_xSqr[0] = 0;
 	for (j = 1; j <= N; j++)	{
@@ -43,30 +43,30 @@ int main()	{
 		cumulative_y[j] = cumulative_y[j-1] + points[j].y;
 		cumulative_xy[j] = cumulative_xy[j-1] + points[j].x * points[j].y;
 		cumulative_xSqr[j] = cumulative_xSqr[j-1] + points[j].x * points[j].x;
-		
+
 		for (i = 1; i <= j; i++)	{
 			interval = j - i + 1;
 			x_sum = cumulative_x[j] - cumulative_x[i-1];
 			y_sum = cumulative_y[j] - cumulative_y[i-1];
 			xy_sum = cumulative_xy[j] - cumulative_xy[i-1];
 			xsqr_sum = cumulative_xSqr[j] - cumulative_xSqr[i-1];
-			
+
 			num = interval * xy_sum - x_sum * y_sum;
 			if (num == 0)
 				slope[i][j] = 0.0;
 			else {
 				denom = interval * xsqr_sum - x_sum * x_sum;
-				slope[i][j] = (denom == 0) ? INF : (num / double(denom));				
+				slope[i][j] = (denom == 0) ? INF : (num / double(denom));
 			}
             		intercept[i][j] = (y_sum - slope[i][j] * x_sum) / double(interval);
-            
+
            		for (k = i, E[i][j] = 0.0; k <= j; k++)	{
             			tmp = points[k].y - slope[i][j] * points[k].x - intercept[i][j];
             			E[i][j] += tmp * tmp;
             		}
 		}
 	}
-	
+
 	// find the cost of the optimal solution
 	OPT[0] = opt_segment[0] = 0;
 	for (j = 1; j <= N; j++)	{
@@ -80,23 +80,23 @@ int main()	{
 		OPT[j] = mn + C;
 		opt_segment[j] = k;
 	}
-	
+
 	printf("\nCost of the optimal solution : %lf\n", OPT[N]);
-	
+
 	// find the optimal solution
 	stack <int> segments;
 	for (i = N, j = opt_segment[N]; i > 0; i = j-1, j = opt_segment[i])	{
 		segments.push(i);
 		segments.push(j);
 	}
-	
+
 	printf("\nAn optimal solution :\n");
 	while (!segments.empty())	{
 		i = segments.top(); segments.pop();
 		j = segments.top(); segments.pop();
-		printf("Segment (y = %lf * x + %lf) from points %d to %d with square error %lf.\n", 
+		printf("Segment (y = %lf * x + %lf) from points %d to %d with square error %lf.\n",
 				slope[i][j], intercept[i][j], i, j, E[i][j]);
 	}
-	
+
 	return 0;
-}
+}*/
