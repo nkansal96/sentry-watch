@@ -37,7 +37,7 @@ router.post('/panic', (req, res) => {
 			});
 	}
 
-	if (alertEmergencyServices) {
+	if (toSend && alertEmergencyServices) {
 		var emergencyMsg = config.particleSettings.name + " has sent out a panic alert and is requesting emergency services. His/her last known location was at: " + locations[randIndex];
 		twilio.sendText(emergencyMsg, emergencyServicesPhone, (err, message) => {
 			// console.log(err, message);
@@ -74,7 +74,7 @@ router.post('/struggle', (req, res) => {
 			});
 	}
 
-	if (alertEmergencyServices) {
+	if (toSend && alertEmergencyServices) {
 		var emergencyMsg = config.particleSettings.name + "\'s behavior indicates that he/she is in a physical struggle and emergency services are being requested. His/her last known location was at: " + locations[randIndex];
 		twilio.sendText(emergencyMsg, emergencyServicesPhone, (err, message) => {
 			// console.log(err, message);
